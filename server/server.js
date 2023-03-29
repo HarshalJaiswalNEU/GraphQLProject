@@ -137,4 +137,4 @@ app.use('/graphql', expressGraphQL({
     graphiql: true,
 }))
 
-app.listen( 8080. , ()=> console.log('server running') )
+app.listen( 3000. , ()=> console.log('server running') )
