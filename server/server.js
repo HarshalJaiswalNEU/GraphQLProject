@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require("cors");
 const expressGraphQL = require('express-graphql').graphqlHTTP
 const {
     GraphQLSchema,
@@ -131,10 +132,10 @@ const schema = new GraphQLSchema({
     query: RootQueryType,
     mutation: RootMutationType
 })
-
+app.use(cors());
 app.use('/graphql', expressGraphQL({ 
     schema: schema,
     graphiql: true,
 }))
 
-app.listen( 3000. , ()=> console.log('server running') )
+app.listen( 3001. , ()=> console.log('server running') )
