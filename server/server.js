@@ -128,6 +128,15 @@ const RootMutationType = new GraphQLObjectType({
     })
 })
 
+// 
+// mutation{
+//     addBook(name: "abc", authorId: 1){
+//       id,
+//       name
+//     }
+//   }
+// 
+
 const schema = new GraphQLSchema({
     query: RootQueryType,
     mutation: RootMutationType
