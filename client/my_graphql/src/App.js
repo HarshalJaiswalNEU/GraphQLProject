@@ -7,7 +7,7 @@ import Form from './components/Form';
 const errorLink =  onError(({ graphQLErrors, newtorkErrors})=>{
   if(graphQLErrors){
       graphQLErrors.map(({message, location, path}) => {
-        alert(' graphQL error ${message}');
+        alert(' graphQL error ${message}',message);
     }) ;
   }
 

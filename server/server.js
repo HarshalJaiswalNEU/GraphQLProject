@@ -1,6 +1,9 @@
 const express = require('express')
 const cors = require("cors");
 const expressGraphQL = require('express-graphql').graphqlHTTP
+
+const port = process.env.PORT || 3001;
+
 const {
     GraphQLSchema,
     GraphQLObjectType,
@@ -147,4 +150,8 @@ app.use('/graphql', expressGraphQL({
     graphiql: true,
 }))
 
-app.listen( 3001. , ()=> console.log('server running') )
+app.listen( port , ()=> console.log('server running', port) )
+
+// sudo nginx
+// sudo nginx -s stop 
+// lsof -nPL -iTCP:8080
